@@ -9,6 +9,9 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class CarResource {
 
+	// @Autowired
+	// private RestTemplate restTemplate;
+
 	public List<String> car() {
 		RestTemplate restTemplate = new RestTemplate();
 		String url = "http://192.168.0.103:8083/item/car";

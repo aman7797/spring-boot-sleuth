@@ -1,0 +1,105 @@
+2020-01-11 11:50:20.268  INFO [MALL-SERVICE,,,] 15648 --- [main] com.example.mall.MallApplication         : No active profile set, falling back to default profiles: default
+2020-01-11 11:50:21.357  INFO [MALL-SERVICE,,,] 15648 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=34c707bb-d51d-3865-9807-cfa24f98cc4e
+2020-01-11 11:50:22.799  INFO [MALL-SERVICE,,,] 15648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-01-11 11:50:22.821  INFO [MALL-SERVICE,,,] 15648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-11 11:50:22.822  INFO [MALL-SERVICE,,,] 15648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-11 11:50:23.717  INFO [MALL-SERVICE,,,] 15648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-11 11:50:23.718  INFO [MALL-SERVICE,,,] 15648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3427 ms
+2020-01-11 11:50:23.886 ERROR [MALL-SERVICE,,,] 15648 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'tracingFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'httpTracing' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceHttpAutoConfiguration.class]: Unsatisfied dependency expressed through method 'httpTracing' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracing' defined in class path resource [org/springframework/cloud/sleuth/autoconfig/TraceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracing' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mallController': Unsatisfied dependency expressed through field 'carResource'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'carResource': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-01-11 11:50:23.951  INFO [MALL-SERVICE,,,] 15648 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-11 11:50:23.962  WARN [MALL-SERVICE,,,] 15648 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-01-11 11:50:23.985  INFO [MALL-SERVICE,,,] 15648 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-11 11:50:24.388 ERROR [MALL-SERVICE,,,] 15648 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in com.example.mall.resource.CarResource required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2020-01-11 11:56:08.905  INFO [MALL-SERVICE,,,] 15528 --- [main] com.example.mall.MallApplication         : No active profile set, falling back to default profiles: default
+2020-01-11 11:56:09.827  INFO [MALL-SERVICE,,,] 15528 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=34c707bb-d51d-3865-9807-cfa24f98cc4e
+2020-01-11 11:56:10.813  INFO [MALL-SERVICE,,,] 15528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-01-11 11:56:10.823  INFO [MALL-SERVICE,,,] 15528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-11 11:56:10.824  INFO [MALL-SERVICE,,,] 15528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-11 11:56:11.507  INFO [MALL-SERVICE,,,] 15528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-11 11:56:11.508  INFO [MALL-SERVICE,,,] 15528 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2583 ms
+2020-01-11 11:56:11.681 ERROR [MALL-SERVICE,,,] 15528 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'tracingFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'httpTracing' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceHttpAutoConfiguration.class]: Unsatisfied dependency expressed through method 'httpTracing' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracing' defined in class path resource [org/springframework/cloud/sleuth/autoconfig/TraceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracing' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mallController': Unsatisfied dependency expressed through field 'carResource'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'carResource': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-01-11 11:56:11.732  INFO [MALL-SERVICE,,,] 15528 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-11 11:56:11.737  WARN [MALL-SERVICE,,,] 15528 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-01-11 11:56:11.753  INFO [MALL-SERVICE,,,] 15528 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-11 11:56:11.980 ERROR [MALL-SERVICE,,,] 15528 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in com.example.mall.resource.CarResource required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2020-01-11 11:57:17.599  INFO [MALL-SERVICE,,,] 7804 --- [main] com.example.mall.MallApplication         : No active profile set, falling back to default profiles: default
+2020-01-11 11:57:18.444  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=34c707bb-d51d-3865-9807-cfa24f98cc4e
+2020-01-11 11:57:19.357  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-01-11 11:57:19.368  INFO [MALL-SERVICE,,,] 7804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-11 11:57:19.369  INFO [MALL-SERVICE,,,] 7804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-11 11:57:19.983  INFO [MALL-SERVICE,,,] 7804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-11 11:57:19.983  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2370 ms
+2020-01-11 11:57:20.505  WARN [MALL-SERVICE,,,] 7804 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-01-11 11:57:20.506  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-11 11:57:20.515  WARN [MALL-SERVICE,,,] 7804 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-01-11 11:57:20.515  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-11 11:57:20.968  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-11 11:57:22.622  WARN [MALL-SERVICE,,,] 7804 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-01-11 11:57:22.965  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-01-11 11:57:23.048  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-01-11 11:57:23.484  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-01-11 11:57:23.485  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-01-11 11:57:23.630  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-01-11 11:57:23.630  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-01-11 11:57:23.778  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-01-11 11:57:23.948  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-01-11 11:57:24.115  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-01-11 11:57:24.117  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-01-11 11:57:24.119  INFO [MALL-SERVICE,,,] 7804 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-01-11 11:57:24.122  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1578724044121 with initial instances count: 1
+2020-01-11 11:57:24.130  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MALL-SERVICE with eureka with status UP
+2020-01-11 11:57:24.131  INFO [MALL-SERVICE,,,] 7804 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1578724044131, current=UP, previous=STARTING]
+2020-01-11 11:57:24.133  INFO [MALL-SERVICE,,,] 7804 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MALL-SERVICE/Aman-Lal.India.XoriantCorp.com:MALL-SERVICE:8082: registering service...
+2020-01-11 11:57:24.172  INFO [MALL-SERVICE,,,] 7804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-01-11 11:57:24.173  INFO [MALL-SERVICE,,,] 7804 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2020-01-11 11:57:24.173  INFO [MALL-SERVICE,,,] 7804 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MALL-SERVICE/Aman-Lal.India.XoriantCorp.com:MALL-SERVICE:8082 - registration status: 204
+2020-01-11 11:57:24.479  INFO [MALL-SERVICE,,,] 7804 --- [main] com.example.mall.MallApplication         : Started MallApplication in 8.272 seconds (JVM running for 9.381)
+2020-01-11 11:58:01.601  INFO [MALL-SERVICE,,,] 7804 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-11 11:58:01.601  INFO [MALL-SERVICE,,,] 7804 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-11 11:58:01.619  INFO [MALL-SERVICE,,,] 7804 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-01-11 11:58:01.878  INFO [MALL-SERVICE,7c4ea837821396d6,7c4ea837821396d6,true] 7804 --- [http-nio-8082-exec-1] c.e.mall.controller.MallController       : Menu called ::
+2020-01-11 11:58:01.879  INFO [MALL-SERVICE,7c4ea837821396d6,7c4ea837821396d6,true] 7804 --- [http-nio-8082-exec-1] c.e.mall.controller.MallController       : Menu Items invoked
+2020-01-11 11:58:01.879  INFO [MALL-SERVICE,7c4ea837821396d6,7c4ea837821396d6,true] 7804 --- [http-nio-8082-exec-1] c.e.mall.controller.MallController       : Item List ::[Car, Electronic, Grocery, Mobile]
+2020-01-11 11:58:07.938  INFO [MALL-SERVICE,71d493546458bd15,71d493546458bd15,true] 7804 --- [http-nio-8082-exec-2] c.e.mall.controller.MallController       : Car selected from menu
+2020-01-11 11:58:13.473  INFO [MALL-SERVICE,3b6fee3558c2bb38,3b6fee3558c2bb38,true] 7804 --- [http-nio-8082-exec-4] c.e.mall.controller.MallController       : Car selected from menu
+2020-01-11 12:02:23.950  INFO [MALL-SERVICE,,,] 7804 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-01-11 12:07:23.954  INFO [MALL-SERVICE,,,] 7804 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-01-11 12:12:23.955  INFO [MALL-SERVICE,,,] 7804 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

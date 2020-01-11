@@ -6,10 +6,13 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.mall.resource.CarResource;
+
+import brave.sampler.Sampler;
 
 @RestController
 public class MallController {
@@ -18,6 +21,11 @@ public class MallController {
 	private CarResource carResource;
 
 	public Logger LOGGER = LoggerFactory.getLogger(MallController.class);
+
+	@Bean
+	public Sampler defaultSampler() {
+		return Sampler.ALWAYS_SAMPLE;
+	}
 
 	@RequestMapping("/menu")
 	public String menu() {
