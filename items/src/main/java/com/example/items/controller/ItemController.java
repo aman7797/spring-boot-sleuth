@@ -27,9 +27,9 @@ public class ItemController {
 		LOGGER.info("Car Items");
 		List<String> carList = new ArrayList<String>();
 		carList.add("Nano");
-		carList.add("Nano");
-		carList.add("Nano");
-		carList.add("Nano");
+		carList.add("Sumo");
+		carList.add("Kamo");
+		carList.add("Riano");
 		LOGGER.info("Car Items List :: " + carList);
 		return carList;
 	}
